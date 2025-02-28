@@ -2,9 +2,11 @@ import { useState } from "react";
 
 const NavBar = () => {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
+  
 
   return (
     <>
+    
       <nav id="navbar">
         <ul className="nav nav-underline">
           <li className="nav-item">
