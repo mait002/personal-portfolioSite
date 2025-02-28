@@ -1,0 +1,319 @@
+.App {
+  
+  background-color: black;
+  
+  
+
+  #navbar {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    
+    .nav-item {
+      width: 200px;
+    }
+
+    .nav-link {
+      color: pink;
+      width: 100px;
+    }
+    .nav-link:hover {
+      color: rgb(231, 65, 145);
+    }
+
+    .active {
+      
+      color: rgb(253, 253, 253);
+    }
+  }
+
+  #home {
+    background-color: black;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+    .greeter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+      
+      padding-top: 100px;
+
+      .bot {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        left: 5%;
+        
+        padding: 0;
+        margin: 0;
+      }
+
+      .tektur-greeting {
+        font-family: "Tektur", sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        position: absolute;
+        color: rgb(253, 253, 253);
+        right: 10%; 
+        text-align: center;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+        width: 50%;
+      }
+      .scrollDown{
+        position: absolute;
+        width: 100px;
+        height: auto;
+        bottom: 20px;  
+        left: 50%;
+      }
+    }
+  }
+
+  #about{
+    background-color: black;
+    
+    
+    display: flex;
+    align-items: center;
+
+    .about{
+      background-color: #FF6699;
+      padding: 5px;
+      margin: 0 10px;
+      border-radius: 10px;
+      height: 70%;
+    }
+    
+
+    .nav{
+      
+      display: flex;
+      justify-content: space-around;
+      height: 50px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .nav-item{
+        width: 200px;
+        text-align: center;
+    }
+
+    .nav-link {
+      color: pink;
+      width: 200px;
+    }
+    .nav-link:hover {
+      color: rgb(220, 5, 109);
+    }
+
+    .active {
+      
+      color: rgb(16, 1, 1);
+    }
+
+    #meet{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .propic{
+        width: 40%;
+        margin: 30px;
+        width: 300px;
+        height: 300px;
+        box-shadow: 2px 2px 6px 4px  rgb(87, 11, 44);
+        border-radius: 300px;
+        
+        
+      }
+      .intro{
+        
+        font-family: "Source Serif 4", serif;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        align-self: center;
+        justify-self: center;
+        margin-top: 20px;
+        font-weight: 500;
+        font-style: normal;
+        padding: 0 10px;
+        text-align: justify;
+        left: 10%;
+        width: 60%;
+      }
+
+      
+    }
+
+    #education{
+      display: block;
+      margin: 5%;
+      padding: 0 10px;
+      font-family: "Source Serif 4", serif;
+      .twoColEntry{
+        display: flex;
+        justify-content: space-between;
+
+        .tmu{
+          display: flex;
+          img{
+            
+            width: 50px;
+            height: auto;
+            
+          }
+          
+        }
+        
+      }
+    }
+    #more{
+      font-family: "Source Serif 4", serif;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        align-self: center;
+        justify-self: center;
+        margin: 10%;
+        font-weight: 500;
+        font-style: normal;
+        padding: 0 10px;
+        text-align: justify;
+        width: 80%;
+
+    }
+
+  }
+
+  #projects{
+    background-color: black;
+    
+    
+    padding: 5% 0;
+    
+    font-family: "Tektur", sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        
+        color: rgb(253, 253, 253);
+  
+        text-align: center;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+    h3{
+      font-size: 60px;
+    }
+    .row{
+      padding: 5%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    
+    .project{
+      
+      display: flex;
+      text-align: center;
+      
+      justify-content: center;
+      
+      
+      transition: transform 0.3s ease-in-out;
+
+      .img{
+        width: 200px;
+        height: 200px;
+        border-radius: 300px;
+        
+      
+      
+      }
+      a{
+        color: white;
+        text-decoration: none;
+        display: block;
+
+        h5{
+          margin-top: 20px;
+          padding: 10px 0;
+        }
+
+
+      }
+      a:hover{
+        color: rgb(220, 5, 109);
+        
+      }
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    .projectSlider {
+      display: flex;
+      gap: 30px; 
+      animation: scroll 10s linear infinite; 
+      width: max-content;
+    }
+
+    .projectContainer {
+      width: 100%;
+      overflow: hidden; 
+      position: relative;
+      white-space: nowrap; 
+    }
+
+    .projectSlider:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  #contact{
+    background-color: black;
+    color: white;
+    font-family: "Tektur", sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        text-align: center;
+    
+    .img{
+      display: flex;
+      justify-content: center;
+      .envelope{
+        
+        width: 400px;
+  
+      }
+
+    }
+    a{
+      
+      background-color: black;
+      color: white;
+    }
+    a:hover{
+      color: rgb(220, 5, 109);
+    }
+    .icons{
+      width: 50px;
+    }
+    p{
+      font-family: "Source Serif 4", serif;
+      font-size: 20px;
+    }
+    
+  }
+}
