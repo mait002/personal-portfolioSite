@@ -47,7 +47,7 @@ const About = () => {
         <section id="education">
             <div className="twoColEntry">
             <div className="tmu">
-                <a href="https://www.torontomu.ca/"><img src={TMU} alt="tmu logo" /></a>
+                <a target="_blank" href="https://www.torontomu.ca/"><img src={TMU} alt="tmu logo" /></a>
             <h4>Toronto Metropolitan University (Formerly Ryerson University)</h4>
             </div>
             
@@ -68,8 +68,7 @@ const About = () => {
             </p>
             <p><strong>Activities:</strong> 
             <ul>
-            Undergraduate Science Society of Toronto Metropolitan (USSTM)
-            <br />
+            Undergraduate Science Society of Toronto Metropolitan (USSTM):
             Formal Committee Member
             </ul>
             
@@ -84,7 +83,7 @@ const About = () => {
             <br /> 
             After taking the Machine Learning course at TMU, she has built a strong foundation in data handling, preprocessing, and transformation techniques—turning messy datasets into valuable insights. 
             Whether it's training predictive models, fine-tuning algorithms, or optimizing datasets for accuracy, she enjoys the challenge of bridging data with intelligent systems.
-            With an ever-evolving skill set and a drive for continuous learning, Maitreyee is always looking for new challenges
+            With an ever-evolving skill set and a drive for continuous learning, Maitreyee is always looking for new challenges.
             </p>
         </section>}
       </div>
