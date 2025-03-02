@@ -17,6 +17,7 @@
     border: 2px solid pink;
     text-align: center;
     
+    
 
     .nav-item {
       
@@ -112,35 +113,38 @@
     margin: 0 10px;
     border-radius: 10px;
     height: 70%;
+
+    .about-nav {
+      display: flex;
+      justify-content: space-around;
+      height: 50px;
+      padding: 20px;
+      margin: 20px 0;
+      font-family: "Tektur", sans-serif;
+      font-weight: 200;
+      list-style: none;
+    }
+  
+    .nav-item {
+      width: 200px;
+      text-align: center;
+      color: aliceblue;
+    }
+  
+    .nav-link {
+      color: pink;
+      width: 200px;
+    }
+    .nav-link:hover {
+      color: rgb(132, 13, 71);
+    }
+  
+    .active {
+      color: rgb(16, 1, 1);
+    }
   }
 
-  .nav {
-    display: flex;
-    justify-content: space-around;
-    height: 50px;
-    padding: 20px;
-    margin: 20px 0;
-    font-family: "Tektur", sans-serif;
-    font-weight: 200;
-  }
-
-  .nav-item {
-    width: 200px;
-    text-align: center;
-    color: aliceblue;
-  }
-
-  .nav-link {
-    color: pink;
-    width: 200px;
-  }
-  .nav-link:hover {
-    color: rgb(132, 13, 71);
-  }
-
-  .active {
-    color: rgb(16, 1, 1);
-  }
+  
   
 
   #meet {
@@ -211,7 +215,7 @@
     padding: 5% 0;
 
     font-family: "Tektur", sans-serif;
-    font-size: 40px;
+    font-size: clamp(2rem, 2rem + 0.476vw, 1rem);
     font-weight: 500;
 
     color: rgb(253, 253, 253);
@@ -220,7 +224,7 @@
     font-style: normal;
     font-variation-settings: "wdth" 100;
     h3 {
-      font-size: 60px;
+      font-size: clamp(2.5rem, 2rem + 0.476vw, 1rem);
     }
     .row {
       padding: 5%;
@@ -236,8 +240,9 @@
       text-align: center;
 
       justify-content: center;
-
+      width: 20%;
       transition: transform 0.3s ease-in-out;
+      border: 2px solid red;
 
       .img {
         width: 200px;
@@ -295,27 +300,38 @@
     text-align: center;
     margin-bottom: 0;
     padding-bottom: 0;
+    border: 2px solid red;
+    
+    .container{
+      .contact-nav{
+        display: flex;
+        list-style: none;
+      }
 
-    .img {
-      display: flex;
-      justify-content: center;
-      .envelope {
-        width: 400px;
+      .img {
+        display: flex;
+        justify-content: center;
+        .envelope {
+          width: 40%;
+        }
+      }
+      a {
+        background-color: black;
+        color: white;
+      }
+      a:hover {
+        color: rgb(220, 5, 109);
+      }
+      .icons {
+        border: 2px solid red;
+        width: 50px;
+      }
+      p {
+        font-family: "Source Serif 4", serif;
+        font-size: 20px;
       }
     }
-    a {
-      background-color: black;
-      color: white;
-    }
-    a:hover {
-      color: rgb(220, 5, 109);
-    }
-    .icons {
-      width: 50px;
-    }
-    p {
-      font-family: "Source Serif 4", serif;
-      font-size: 20px;
-    }
+
+    
   }
 }

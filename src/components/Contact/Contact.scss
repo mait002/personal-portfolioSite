@@ -1,0 +1,16 @@
+@media screen and (max-width: 800px){
+   
+        .contact-nav{
+            display: flex;
+            flex-direction: row;
+            border: 2px solid red;
+            height: 15%;
+            padding: 2px;
+
+            .a:hover{
+                color: rgb(220, 5, 109) !important;
+            }
+            
+            
+        }
+    }

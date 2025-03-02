@@ -11,7 +11,7 @@ const Contact = () => {
             <Lottie className="envelope" animationData={contact} loop={true} />
           </div>
           <hr />
-          <ul className="nav justify-content-center">
+          <ul className="contact-nav justify-content-center">
             <li className="nav-item">
               <a target="_blank" href="https://www.linkedin.com/in/maitreyee-d-8241ab203/" className="nav-link px-2">
                 <h3>
