@@ -4,6 +4,7 @@ import ball from '../../assets/images/ball.json'
 import profile from '../../assets/images/profile.png'
 import bank from '../../assets/images/bank.json';
 import dice from '../../assets/images/dice.json'
+import './Projects.scss'
 
 const Projects = () => {
 

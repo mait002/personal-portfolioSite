@@ -5,18 +5,13 @@ import Contact from './components/Contact/Contact'
 import Home from './components/Home/Home'
 import NavBar from './components/NavBar/NavBar'
 import Projects from './components/Projects/Projects'
-import SideBar from './components/SideBar/SideBar'
 
 function App() {
   return(
     <>
     <div className='App'>
-    <div className='largeScreen'>
+    
       <NavBar/>
-      </div>
-      <div className='smallScreen'>
-        <SideBar/>
-      </div>
       
       
       

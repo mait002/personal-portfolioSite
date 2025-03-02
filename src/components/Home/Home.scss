@@ -1,0 +1,24 @@
+@media screen and (max-width: 800px) {
+  .greeter {
+    display: flex;
+    flex-direction: column;
+    border: yellow 2px solid;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+  .bot{
+    height: 40% !important;
+    display: flex;
+    align-items: center;
+  }
+  
+  .tektur-greeting {
+    width: 100% !important;
+    height: 30%;
+    
+    padding: 10px 0 ;
+    margin: 0;
+  }
+}

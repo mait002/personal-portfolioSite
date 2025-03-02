@@ -1,0 +1,39 @@
+@media screen and (max-width: 800px) {
+    .about{
+
+        .nav{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid yellow;
+            width: 100% !important;
+            height: auto !important;
+            z-index: 8;
+            padding: 0 !important;
+            margin: 0 !important;
+            
+        }
+
+        .nav-item{
+            border: 2px solid yellow;
+        }
+
+        .aboutInfo{
+            position: relative;
+            border: 2px solid red;
+        }
+        #meet{
+            flex-direction: column;
+            
+            .intro{
+                width: 100% !important;
+                padding: 2px !important;
+            }
+        }
+
+        #education{
+            
+        }
+    }
+  }

@@ -1,5 +1,6 @@
 import Lottie from "lottie-react";
 import contact from "../../assets/images/contact.json";
+import './Contact.scss'
 const Contact = () => {
   return (
     <>

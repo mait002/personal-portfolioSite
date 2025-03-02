@@ -2,13 +2,16 @@ import { Typewriter } from 'react-simple-typewriter';
 import Lottie from 'lottie-react';
 import GreetBot from '../../assets/images/Animation - 1740687549796.json'
 import scrollDirection from '../../assets/images/ScrollDown.json'
-
+import './Home.scss'
 const Home = () => {
     return (
         <>
         
         <div className='greeter'>
-            <Lottie className='bot' animationData={GreetBot} loop={true} />
+
+            <div className='bot'>
+                <Lottie animationData={GreetBot} loop={true} />
+            </div>
             <h4 className='tektur-greeting'>
                 <Typewriter
                     words={[

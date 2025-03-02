@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import './NavBar.scss';
 const NavBar = () => {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   
@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <>
     
-      <nav id="navbar">
+      <nav id="navbar" className="navbar">
         <ul className="nav nav-underline">
           <li className="nav-item">
             <a
