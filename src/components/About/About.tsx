@@ -6,16 +6,16 @@ import "./About.scss";
 const About = () => {
   const [selectedItem, setSelectedItem] = useState<string | null>("Meet Maitreyee");
   const [isOpenNav, setOpenNav] = useState(false);
-  const [isItemSelected, setItemSelected] = useState(false);
+  const [, setItemSelected] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 800);
-  const [activeLink, setActiveLink] = useState<string | null>("hidden");
+  
 
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 800);
       if (window.innerWidth > 800){
         setOpenNav(true);
-        setActiveLink("active");
+        
       }
     };
 
