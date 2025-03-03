@@ -1,11 +1,37 @@
 .App {
-  background-color: black;
+  
   padding-bottom: 0;
   margin-bottom: 0;
   height: 100dvh;
   width: 100vw;
   border: 2px solid red;
   overflow-x: hidden;
+
+  
+
+  .theme-button{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 2px solid red;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+
+    
+}
+
+.hidden{
+    display: none;
+}
+
+.theme-button:hover{
+    background-color: rgb(128, 128, 128, 0.5);
+    transition: transform 30ms ;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
   
 
 
@@ -43,6 +69,8 @@
       color: rgb(253, 253, 253);
     }
     
+  
+    
 
     
   
@@ -54,7 +82,7 @@
   
 
   .greeter {
-    background-color: black;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -303,7 +331,7 @@
   }
 
   #contact {
-    background-color: black;
+    
     color: white;
     font-family: "Tektur", sans-serif;
     font-size: 40px;
@@ -327,7 +355,7 @@
         }
       }
       a {
-        background-color: black;
+        
         color: white;
       }
       a:hover {
@@ -344,4 +372,16 @@
 
     
   }
+}
+
+
+
+.light-mode{
+  background-color: antiquewhite !important;
+  color: black !important;
+}
+
+.dark-mode{
+  background-color: black !important;
+  color: white !important;
 }

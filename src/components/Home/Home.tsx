@@ -3,6 +3,8 @@ import Lottie from 'lottie-react';
 import GreetBot from '../../assets/images/Animation - 1740687549796.json'
 import scrollDirection from '../../assets/images/ScrollDown.json'
 import './Home.scss'
+import App from '../../App';
+
 const Home = () => {
     return (
         <>

@@ -1,5 +1,5 @@
 @media screen and (max-width: 800px) {
-    .nav-bar-icon{
+    .toggle-icons{
         
         display: flex;
         
@@ -20,6 +20,8 @@
         h2:hover{
             color: rgb(207, 12, 106);
         }
+
+        
     }
 
     #navbar{
@@ -105,3 +107,6 @@
     }
     
 }
+
+
+
