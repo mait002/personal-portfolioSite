@@ -5,7 +5,7 @@ import "./About.scss";
 
 const About = () => {
   const [selectedItem, setSelectedItem] = useState<string | null>("Meet Maitreyee");
-  const [isOpenNav, setOpenNav] = useState(true);
+  const [isOpenNav, setOpenNav] = useState(false);
   const [isItemSelected, setItemSelected] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 800);
   const [activeLink, setActiveLink] = useState<string | null>("hidden");
