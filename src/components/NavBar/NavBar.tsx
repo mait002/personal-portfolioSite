@@ -6,6 +6,15 @@ import "./NavBar.scss";
 const NavBar = () => {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const [openSideBar, setOpenSideBar] = useState(false);
+
+  const handleScroll = (id: string) => {
+    setSelectedItem(id);
+    const section = document.getElementById(id);
+    if (section){
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setOpenSideBar(false);
+  };
     
   
 
@@ -36,8 +45,8 @@ const NavBar = () => {
               className={
                 selectedItem === "home" ? "nav-link active" : "nav-link"
               }
-              onClick={() => setSelectedItem("home")}
-              href="#home"
+              onClick={() => handleScroll("home")}
+              
             >
               Home
             </a>
@@ -47,8 +56,8 @@ const NavBar = () => {
               className={
                 selectedItem === "about" ? "nav-link active" : "nav-link"
               }
-              onClick={() => setSelectedItem("about")}
-              href="#about"
+              onClick={() => handleScroll("about")}
+              
             >
               About
             </a>
@@ -58,8 +67,8 @@ const NavBar = () => {
               className={
                 selectedItem === "projects" ? "nav-link active" : "nav-link"
               }
-              onClick={() => setSelectedItem("projects")}
-              href="#projects"
+              onClick={() => handleScroll("projects")}
+              
             >
               Projects
             </a>
@@ -69,8 +78,8 @@ const NavBar = () => {
               className={
                 selectedItem === "contact" ? "nav-link active" : "nav-link"
               }
-              onClick={() => setSelectedItem("contact")}
-              href="#contact"
+              onClick={() => handleScroll("contact")}
+              
             >
               Contact
             </a>
