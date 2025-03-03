@@ -12,16 +12,25 @@
             z-index: 8;
             padding: 0 !important;
             margin: 0 !important;
-            list-style: none;
-            
-            
-            
-
-            
-
             
             
         }
+
+        .aboutnav{
+            list-style: none;
+            flex-direction: column !important;
+            padding: 0;
+            
+
+            .hidden{
+                display: none;
+
+            }
+
+        }
+
+
+        
         
         
             svg{
@@ -29,7 +38,8 @@
                 right: 0 !important;
                 border: 2px solid red;
                 justify-self: flex-end;
-                height: 7%;
+                height: 10%;
+                padding-top: 5px;
             }
 
 
@@ -42,12 +52,28 @@
             .bi-caret-down-fill.rotate {
                 transform: rotate(180deg);
             }
+            .aboutnav.expand {
+                display: flex;
+                max-height: 300px;
+                opacity: 1;
+                transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            }
+
+            .aboutnav.collapse {
+                max-height: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            }
+
+            .caret-icon{
+                display: flex;
+
+            }
         
         
 
-        .nav-item{
-            border: 2px solid yellow;
-        }
+        
 
         .aboutInfo{
             position: relative;

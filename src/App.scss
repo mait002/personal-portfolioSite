@@ -122,13 +122,24 @@
       margin: 20px 0;
       font-family: "Tektur", sans-serif;
       font-weight: 200;
+      
+
+      
+    }
+
+    .aboutnav{
+      
       list-style: none;
+      display: flex;
+      flex-direction: row;
+      
     }
   
     .nav-item {
       width: 200px;
       text-align: center;
       color: aliceblue;
+      
     }
   
     .nav-link {

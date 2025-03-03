@@ -1,51 +1,40 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProfilePicture from "../../assets/images/Ellipse 1.png";
 import TMU from "../../assets/images/tmu1.png";
 import "./About.scss";
 
 const About = () => {
-  const [selectedItem, setSelectedItem] = useState<string | null>("meet");
-  const [openNav, setOpenNav] = useState(true);
+  const [selectedItem, setSelectedItem] = useState<string | null>("Meet Maitreyee");
+  const [isOpenNav, setOpenNav] = useState(true);
+  const [isItemSelected, setItemSelected] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 800);
+  const [activeLink, setActiveLink] = useState<string | null>("hidden");
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 800);
+      if (window.innerWidth > 800){
+        setOpenNav(true);
+        setActiveLink("active");
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleClick = (name : string) => {
+    setSelectedItem(name);
+    setItemSelected(true);
+    setOpenNav(false);
+  }
 
   return (
     <>
       <div className="about">
         <div className="about-nav">
-          <ul className="nav nav-underline">
-            <li className="nav-item">
-              <a
-                className={
-                  selectedItem === "meet" ? "nav-link active" : "nav-link"
-                }
-                onClick={() => setSelectedItem("meet")}
-                href="#about"
-              >
-                Meet Maitreyee
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className={
-                  selectedItem === "education" ? "nav-link active" : "nav-link"
-                }
-                onClick={() => setSelectedItem("education")}
-                href="#about"
-              >
-                Education
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className={
-                  selectedItem === "more" ? "nav-link active" : "nav-link"
-                }
-                onClick={() => setSelectedItem("more")}
-                href="#about"
-              >
-                a little more...
-              </a>
-            </li>
-            <li className="caret-icon">
+        <div className="caret-icon" onClick={() => setOpenNav(!isOpenNav)}>
+          <p>{selectedItem}</p>
               <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -53,14 +42,52 @@ const About = () => {
               fill="black"
               className="bi bi-caret-down-fill"
               viewBox="0 0 16 16"
+              
                         >
               <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
                         </svg>
+            </div>
+          <ul className={`aboutnav nav-underline ${isOpenNav || !isSmallScreen ? "expand": "collapse"}` }>
+            <li className={`nav-item ${isSmallScreen && selectedItem === "Meet Maitreyee" ? "hidden" : ""}`}>
+              <a
+                className={
+                  selectedItem === "Meet Maitreyee" ? `nav-link active` : "nav-link"
+                }
+                onClick={() => handleClick("Meet Maitreyee")
+                  
+                }
+                href="#about"
+              >
+                Meet Maitreyee
+              </a>
             </li>
+            <li className={`nav-item ${isSmallScreen && selectedItem === "Education" ? "hidden" : ""}`}>
+              <a
+                className={
+                  selectedItem === "Education" ? `nav-link active` : "nav-link"
+                }
+                onClick={() => handleClick("Education")}
+                href="#about"
+              >
+                Education
+              </a>
+            </li>
+            <li className={`nav-item ${isSmallScreen && selectedItem === "a little more..." ? "hidden" : ""}`}>
+              <a
+                className={
+                  selectedItem === "a little more..." ? `nav-link active` : "nav-link"
+                }
+                onClick={() => handleClick("a little more...")}
+                href="#about"
+              >
+                a little more...
+              </a>
+            </li>
+            
           </ul>
           
         </div>
-        {selectedItem === "meet" && (
+        {selectedItem === "Meet Maitreyee" && (
           <section id="meet">
             <img className="propic" src={ProfilePicture} />
             <div className="intro">
@@ -87,7 +114,7 @@ const About = () => {
         )}
 
         <div className="aboutInfo">
-          {selectedItem === "education" && (
+          {selectedItem === "Education" && (
             <section id="education">
               <div className="twoColEntry">
                 <div className="tmu">
@@ -126,7 +153,7 @@ const About = () => {
             </section>
           )}
 
-          {selectedItem === "more" && (
+          {selectedItem === "a little more..." && (
             <section id="more">
               <p>
                 Lately, her passion has expanded into the fascinating world of{" "}
