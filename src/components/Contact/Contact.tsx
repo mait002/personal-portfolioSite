@@ -34,7 +34,7 @@ const Contact = () => {
               </a>
             </li>
           </ul>
-          <p className="text-center">Made with 🫶 © Maitreyee Das, 2024</p>
+          <p className="text-center">Made with 🫶 © Maitreyee Das, 2025</p>
         </footer>
       </div>
     </>
